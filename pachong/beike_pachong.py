@@ -37,7 +37,6 @@ with open(f"beike/{dates}.csv",mode='w',encoding='utf-8') as f:
             # print(item.group())
             for item2 in result2:
                 dic=item2.groupdict()
-                # print(dic.values())
                 community=item2.group("community")
                 house_info=item2.group("houseinfo").strip().replace(" ","").replace("\n","")
                 total_price=item2.group("totalprice").strip()
