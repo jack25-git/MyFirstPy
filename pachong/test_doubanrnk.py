@@ -10,7 +10,7 @@ content=res.text
 pat=re.compile(r'<li>.*?<span class="title">(?P<title>.*?)</span>.*?'
                r'<span class="rating_num" property="v:average">(?P<score>.*?)</span>',re.S)
 result=pat.finditer(content)
-f=open("data_douban250.csv", mode="w", encoding="utf-8", newline="")
+f=open("result/data_douban250.csv", mode="w", encoding="utf-8", newline="")
 csvwriter=csv.writer(f)
 for i in result:
     dic=i.groupdict()
